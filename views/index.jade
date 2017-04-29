@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Janne's URL Shortener Microservice
+  p This RESTful API is used to provide JSON data <br/> in the form of a shortened url in replacement for a user inputted url argument
+  <br/>
+  p Example usage
+  code localhost:3000/new/www.freecodecamp.com
+  code localhost:3000/new/www.youtube.com
+  p Example Creation Output
+  code { "original_url":"www.freecodecamp.com", "short_url":"localhost:3000/420" }
+  p Usage:
+  code localhost:3000/420
+  p Will redirect to: 
+  code https://www.freecodecamp.com

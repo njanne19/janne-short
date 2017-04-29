@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/e0/35/0d/e0350dbdd6e7cbe0cf71406b7446380d.jpg");
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+code {
+ font-family: menlo;
+ padding: 2px 4px;
+ font-size: 90%;
+ color: #c7254e;
+ background-color: #f9f2f4;
+ border-radius: 4px;
+}
