@@ -33,11 +33,11 @@ router.get('/:urlToForward', function (req, res, next) {
      var toCheck = data.original_url;
 
      if(regEx2.test(toCheck) == true) {
-       res.redirect(301, data.original_url);
+       res.redirect(301, data["original_url"]);
      }
 
      else {
-       res.redirect(301, 'http://' + data.original_url);
+       res.redirect(301, 'http://' + data["original_url"]);
      }
   });
 });
