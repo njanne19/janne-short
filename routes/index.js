@@ -11,8 +11,12 @@ var short_url = require('./models/short_url.js');
 router.use(bodyParser.json());
 router.use(cors());
 //Database connection
-mongoose.connect(process.env.MONGODB_URI || process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://localhost/short_urls');
+var MongoClient = require('mongodb').MongoClient;
 
+var uri = "mongodb://njanne19:janne123@cluster0-shard-00-00-oke0j.mongodb.net:27017,cluster0-shard-00-01-oke0j.mongodb.net:27017,cluster0-shard-00-02-oke0j.mongodb.net:27017/,cluster0-shard-00-00-oke0j.mongodb.net:27017/admin?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin";
+MongoClient.connect(uri, function(err, db) {
+  db.close();
+});
 
 
 router.get('/', function (req, res, next) {
