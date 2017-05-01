@@ -11,7 +11,7 @@ var short_url = require('./models/short_url.js');
 router.use(bodyParser.json());
 router.use(cors());
 //Database connection
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/short_urls');
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://localhost/short_urls');
 
 
 
