@@ -8,6 +8,6 @@ original_url: String,
 short_url: String
 }, {timestamps: true});
 
-var ModelCalss = mongoose.model('short_url', urlSchema);
+var ModelClass = mongoose.model('short_url', urlSchema);
 
 module.exports = ModelClass;
