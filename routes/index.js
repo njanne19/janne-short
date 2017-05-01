@@ -25,9 +25,8 @@ router.get('/:urlToForward', function (req, res, next) {
 
   var userSnippet = req.params.urlToForward;
 
-  short_url.findOne({'short_url' : userSnippet}, function (err, data) {
+  short_urls.find({'short_url' : userSnippet}, function (err, data) {
 
-    res.json(data);
 
      if (err) res.send("ERROR READING DATABASE/URL NOT FOUND");
 
