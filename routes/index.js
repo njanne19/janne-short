@@ -3,6 +3,11 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var cors = require('cors');
 var router = express.Router();
+var shortURL = require('./models/short_url');
+
+
+
+
 router.use(bodyParser.json());
 router.use(cors());
 
